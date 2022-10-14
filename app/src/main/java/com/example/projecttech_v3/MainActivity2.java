@@ -30,8 +30,8 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1 = new Intent(view.getContext(), MainActivity3.class);
-                startActivity(intent1);
+                Intent intent2 = new Intent(view.getContext(), MainActivity3.class);
+                startActivity(intent2);
             }
         });
 
