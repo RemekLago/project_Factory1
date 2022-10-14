@@ -312,12 +312,12 @@
                 android:text="Nazwa maszyny"
                 android:textAlignment="center" />
 
-            <CheckBox
-                android:id="@+id/checkBox1_2"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="YES" />
+                />
 
             <CheckBox
                 android:id="@+id/checkBox2_2"
@@ -727,7 +727,7 @@
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-        </Button>
+
 
 
 

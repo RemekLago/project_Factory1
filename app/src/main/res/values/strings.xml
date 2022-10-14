@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ProjectTech_v3</string>
+
+    <string-array name="status_check">
+        <item>Yes</item>
+        <item>No</item>
+        <item>None</item>
+
+    </string-array>
+
 </resources>
