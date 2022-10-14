@@ -2,10 +2,15 @@
     <string name="app_name">ProjectTech_v3</string>
 
     <string-array name="status_check">
+        <item>None</item>
         <item>Yes</item>
         <item>No</item>
-        <item>None</item>
+    </string-array>
 
+    <string-array name="status_check_machine">
+        <item>Maszyna M01 grubociag</item>
+        <item>Maszyna M02 wytlaczarka</item>
+        <item>Maszyna M03 walcownia</item>
     </string-array>
 
 </resources>
