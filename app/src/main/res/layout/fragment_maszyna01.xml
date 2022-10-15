@@ -11,6 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="32dp"
-        android:text="maszyna01" />
+        android:text="maszyna01"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
 
 </FrameLayout>

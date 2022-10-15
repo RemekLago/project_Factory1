@@ -15,23 +15,37 @@ public class MainActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-//        TabLayout tabLayout = findViewById(R.id.tabLayout);
-////        TabItem maszyna01 = findViewById(R.id.maszyna01);
-////        TabItem maszyna02 = findViewById(R.id.maszyna02);
-////        TabItem maszyna03 = findViewById(R.id.maszyna03);
-//        ViewPager viewPager = findViewById(R.id.viewpager);
-//
-//        tabLayout.setupWithViewPager(viewPager);
-//
-////        MyPagerAdapter pagerAdapter = new MyPagerAdapter(
-////                getSupportFragmentManager(), tabLayout.getTabCount());
-//        MyPagerAdapter pagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-//        pagerAdapter.addFragment(new Maszyna01(), "maszyna01");
-//        pagerAdapter.addFragment(new Maszyna02(), "maszyna02");
-//        pagerAdapter.addFragment(new Maszyna03(), "maszyna03");
-//        viewPager.setAdapter(pagerAdapter);
-//
-//
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
+        tabLayout.addTab((tabLayout.newTab().setText("maszyna01")));
+        tabLayout.addTab((tabLayout.newTab().setText("maszyna02")));
+        tabLayout.addTab((tabLayout.newTab().setText("maszyna03")));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        final MyPagerAdapter pagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+
+        viewPager.setAdapter(pagerAdapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
+
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+
 //        // it is used to join TabLayout with ViewPager
 ////        tabLayout.setupWithViewPager(viewPager);
     }
