@@ -15,7 +15,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/maszyna01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#2196F3"
@@ -24,7 +23,6 @@
             tools:layout_editor_absoluteY="32dp" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/maszyna02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FFEB3B"
@@ -33,7 +31,6 @@
             tools:layout_editor_absoluteY="179dp" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/maszyna03"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FF9800"
@@ -47,7 +44,6 @@
         android:id="@+id/viewpager"
         android:layout_width="413dp"
         android:layout_height="570dp"
-        android:contentDescription="viewPager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

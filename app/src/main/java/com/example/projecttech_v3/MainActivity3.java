@@ -1,10 +1,10 @@
 package com.example.projecttech_v3;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -16,16 +16,20 @@ public class MainActivity3 extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
 
         TabLayout tabLayout = findViewById(R.id.tabLayout);
-        tabLayout.addTab((tabLayout.newTab().setText("maszyna01")));
-        tabLayout.addTab((tabLayout.newTab().setText("maszyna02")));
-        tabLayout.addTab((tabLayout.newTab().setText("maszyna03")));
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-        final MyPagerAdapter pagerAdapter = new MyPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
-
+        ViewPager viewPager = findViewById(R.id.viewpager);
+        PagerAdapter pagerAdapter = new PagerAdapter(this);
         viewPager.setAdapter(pagerAdapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+//        tabLayout.addTab((tabLayout.newTab().setText("maszyna01")));
+//        tabLayout.addTab((tabLayout.newTab().setText("maszyna02")));
+//        tabLayout.addTab((tabLayout.newTab().setText("maszyna03")));
+//        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+//        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+
+
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
 
