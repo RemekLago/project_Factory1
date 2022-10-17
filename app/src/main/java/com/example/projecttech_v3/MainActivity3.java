@@ -2,10 +2,8 @@ package com.example.projecttech_v3;
 
 
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
+import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity3 extends AppCompatActivity {
@@ -16,18 +14,9 @@ public class MainActivity3 extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
 
         TabLayout tabLayout = findViewById(R.id.tabLayout);
-        ViewPager viewPager = findViewById(R.id.viewpager);
-        PagerAdapter pagerAdapter = new PagerAdapter(this);
-        viewPager.setAdapter(pagerAdapter);
-
-//        tabLayout.addTab((tabLayout.newTab().setText("maszyna01")));
-//        tabLayout.addTab((tabLayout.newTab().setText("maszyna02")));
-//        tabLayout.addTab((tabLayout.newTab().setText("maszyna03")));
-//        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
-//        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
-
+        ViewPager2 viewPager = findViewById(R.id.viewpager);
+//        PagerAdapter pagerAdapter = new PagerAdapter(this);
+//        viewPager.setAdapter(pagerAdapter);
 
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -35,7 +24,7 @@ public class MainActivity3 extends AppCompatActivity {
 
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
+//                viewPager.setCurrentItem(tab.getPosition());
             }
 
             @Override
